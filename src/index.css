@@ -1,68 +1,117 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	background-color: #242424;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header{
+	margin-bottom: 1.2rem;
+	font-weight: 700;
+	font-size: 2rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.container {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	padding: 1rem;
+	background-color: #575757;
+	border-radius: 0.5rem;
 }
+
+section.converter {
+	display: flex;
+	flex-direction: row;
+	align-items: end;
+	gap: 1.3rem;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.select {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.input input {
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.2rem;
+	background-color: #666666;
+	border: none;
+}
+
+.input input:focus {
+	outline: 2px solid #979797;
+}
+
+.select select {
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.2rem;
+	background-color: #666666;
+	border: none;
+}
+
+.select select:focus {
+	outline: 2px solid #979797;
+}
+
+label{
+	font-weight: 600;
+}
+
+.swap{
+	cursor: pointer;
+}
+
+section.result{
+	padding: 1rem;
+	min-width: 15rem;
+	background-color: #666666;
+	margin-top: 1rem;
+	border-radius: 0.5rem;
+}
+
+section p {
+	font-weight: 700;
+}
+
+section p.loading{
+	background-color: #575757;
+	animation: loading 1s infinite;
+}
+
+@keyframes loading {
+	0% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
